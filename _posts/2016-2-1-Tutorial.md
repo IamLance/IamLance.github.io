@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blogging Like a Hacker
+title: 
 ---
 
 SQL Database and dash DB Tutorial
