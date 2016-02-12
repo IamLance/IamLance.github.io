@@ -26,7 +26,8 @@ In this part we will be installing your the application using the [Bluemix DevOp
  6. Click Link to an existing GitHub repository.
  7. Select the repository <username>/sql-databases
  8. Ensure the following options are chosen:
- **Private Project**:checked	
+
+	 **Private Project**:checked	
 
 	**Make this a Bluemix Project**:checked	
 
