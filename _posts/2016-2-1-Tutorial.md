@@ -43,6 +43,14 @@ In this part we will be installing your the application using the [Bluemix DevOp
 **Git URL**:https://github.com//devops-delivery-pipeline.git	
 **Branch**:master	
 **Stage Trigger**:Run jobs whenever a change is pushed to Git	
+3. On the Job Tab, click the ADD JOB link and select Build.Change the job name to any name you want
+
+ **Builder Type**:Gradle	
+ **Build Shell Command** 
+ 	`#!/bin/bash
+  gradle assemble	`
+
+ **Stop running this stage if this job fails**	:checked	
 
 > **Note:**
 
