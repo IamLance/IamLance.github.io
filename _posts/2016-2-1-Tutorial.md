@@ -50,17 +50,8 @@ In this part we will be installing your the application using the [Bluemix DevOp
 3. On the Job Tab, click the ADD JOB link and select Build.Change the job name to any name you want
 
  **Builder Type**:Gradle	
-
->  **Build Shell Command** 
-
-
-
-
+ **Build Shell Command** 
 >  #!/bin/bash
-
-
-
-
 
 >  gradle assemble
 
