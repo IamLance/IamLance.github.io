@@ -16,10 +16,14 @@ In Bluemix it is powered by DB2.
 
 Installing the Application
 -------------
+In this part we will be installing your the application using the [Bluemix DevOps Services](https://hub.jazz.net/)  It has a delivery pipeline that allows you to build, test, and deploy your web application.
 
- 1.  Login to your bluemix account  
- https://idaas.iam.ibm.com/idaas/mtfim/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:basicldapuser 
- 2. List item
+ 1.  Open a web browser tab and login to [GitHub](https://github.com).
+ 2. Go to the GitHub repository and fork https://github.com/IamLance/sql-databases.
+ 3. Open another web browser tab and login to [Bluemix DevOps](https://hub.jazz.net/).
+ 4. Click CREATE PROJECT.
+ 5.  Name your project sql-databases
+ 6. Click Link to an existing GitHub repository.
 
 > **Note:**
 
