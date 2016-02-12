@@ -24,6 +24,17 @@ In this part we will be installing your the application using the [Bluemix DevOp
  4. Click CREATE PROJECT.
  5.  Name your project sql-databases
  6. Click Link to an existing GitHub repository.
+ 7. Select the repository <username>/sql-databases
+ 8. Ensure the following options are chosen:
+**Private Project**-checked	
+**Add features for Scrum development**-checked	
+**Make this a Bluemix Project**-checked	
+**Region**-IBM Bluemix US South	
+**Organization**-leave the default selection	
+**Space**-dev   
+  
+ 9. Click the CREATE button. Wait for your project to be created.
+ 10. 
 
 > **Note:**
 
