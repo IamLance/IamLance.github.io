@@ -52,7 +52,6 @@ In this part we will be installing your the application using the [Bluemix DevOp
  **Builder Type**:Gradle	
  **Build Shell Command** 
 >  #!/bin/bash
-
 >  gradle assemble
 
 
