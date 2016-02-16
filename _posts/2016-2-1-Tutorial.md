@@ -50,8 +50,9 @@ Examine the code
  The Application is coded in JSP.
  
 1.  Examine the Database connection code. Go to DBHelper.java
+
 >  Map< String, String > env = System.getenv();
->  if (env.containsKey("VCAP_SERVICES")) {
+ if (env.containsKey("VCAP_SERVICES")) {
             // parse the VCAP JSON structure
             JSONParser parser = new JSONParser();
             JSONObject vcap=(JSONObject) parser.parse(env.get("VCAP_SERVICES"));
