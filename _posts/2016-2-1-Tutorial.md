@@ -51,32 +51,5 @@ Examine the code
  
 1.  Examine the Database connection code. Go to DBHelper.java
 
-```java
- Map<String, String> env = System.getenv();
-        if (env.containsKey("VCAP_SERVICES")) {
-            // parse the VCAP JSON structure
-            JSONParser parser = new JSONParser();
-            JSONObject vcap = (JSONObject) parser.parse(env.get("VCAP_SERVICES"));
-            JSONObject service = null;
-            writer.println("Searching through VCAP keys");
-            for (Object key : vcap.keySet()) {
-                String keyStr = (String) key;
-                if (keyStr.toLowerCase().contains("sqldb")) {
-                    service = (JSONObject) ((JSONArray) vcap.get(keyStr)).get(0);
-                    break;
-                }
-            }
-            if (service != null) {
-                JSONObject creds = (JSONObject) service.get("credentials");
-                databaseHost = (String) creds.get("host");
-                databaseName = (String) creds.get("db");
-                port = (long) creds.get("port");
-                user = (String) creds.get("username");
-                password = (String) creds.get("password");
-                url = (String) creds.get("jdbcurl");
-            } else {
-                writer.println("VCAP_SERVICES is null");
-                return false;
-            }
-
-	```
+    Map< String, String > env = System.getenv();
+    
