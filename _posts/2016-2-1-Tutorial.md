@@ -55,4 +55,6 @@ Notice that with this line we get the system environment variables
 
     Map<String,String> env = System.getenv();
 
- 
+ Then we check if it contains a VCAP services
+
+    if(env.containsKey("VCAP_SERVICES"))
