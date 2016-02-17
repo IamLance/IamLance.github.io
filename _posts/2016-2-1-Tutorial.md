@@ -64,7 +64,7 @@ If it does contain a VCAP services we then  put it in a JSON object since it is 
       JSONObject vcap = (JSONObject)       parser.parse(env.get("VCAP_SERVICES"));
   
 
-We then parse it and look for the SQL Database service key hiding under the sqldb.
+We then parse it and look for the SQL Database service hiding under the key "sqldb".
 
        for (Object key : vcap.keySet()) {
                     String keyStr = (String) key;
