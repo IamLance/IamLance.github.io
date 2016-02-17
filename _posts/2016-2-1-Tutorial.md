@@ -124,3 +124,61 @@ Code for creating a table
 
     }
 
+Code for inserting data
+
+     public String insertInto(Account bean) {
+            if (con != null) {
+                try {
+                    sqlStatement = "INSERT INTO " + tableName
+                            + "(FNAME,LNAME) VALUES (?,?)";
+                    PreparedStatement preparedStatement = con.prepareStatement(sqlStatement);
+                    preparedStatement.setString(1, bean.getFname());
+                    preparedStatement.setString(2, bean.getLname());
+                    writer.println("Executing: " + sqlStatement);
+                    preparedStatement.executeUpdate();
+    
+                } catch (SQLException e) {
+                    writer.println("Error " + e);
+                }
+                return selectSingle(bean.getFname());
+            }
+            return null;
+        }
+    
+
+Code for Selecting data
+
+    public ArrayList<Account> getAllAccount() {
+            if (con != null) {
+                try {
+                    sqlStatement = "SELECT * FROM " + tableName;
+                    ArrayList<Account> beans = new ArrayList<>();
+                    ResultSet rs = stmt.executeQuery(sqlStatement);
+                    writer.println("Executing: " + sqlStatement);
+                    while (rs.next()) {
+                        Account a = new Account();
+                        a.setFname(rs.getString("fname"));
+                        a.setLname(rs.getString("lname"));
+                        beans.add(a);
+                    }
+                    return beans;
+                } catch (SQLException e) {
+                    writer.println("Error " + e);
+                    return null;
+                }
+            }
+            return null;
+        }
+
+Code for deleting data
+
+     public void deleteAllAccount() {
+            if (con != null) {
+                try {
+                    sqlStatement = "delete FROM " + tableName;
+                    ArrayList<Account> beans = new ArrayList<>();
+                    stmt.executeUpdate(sqlStatement);
+                } catch (Exception e) {
+                }
+            }
+        }
