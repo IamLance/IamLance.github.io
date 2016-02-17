@@ -58,3 +58,7 @@ Notice that with this line we get the system environment variables
  Then we check if it contains a VCAP services
 
     if(env.containsKey("VCAP_SERVICES"))
+
+If it does contain a VCAP services we then  put it in a JSON object since it is in JSON format.
+
+      JSONObject vcap = (JSONObject)       parser.parse(env.get("VCAP_SERVICES"));
