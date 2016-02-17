@@ -101,3 +101,26 @@ To connect to the database we then input the credentials we parse earlier from t
                     dataSource.setPassword(password);
                     dataSource.setDriverType(4);
                     this.con = dataSource.getConnection();
+                
+
+Examine the code - SQL Statements
+------------- 
+Code for creating a table 
+
+        private void createTable() {
+        // create a table
+        if (con != null) {
+            try {
+                stmt = con.createStatement();
+                // Create the CREATE TABLE SQL statement and execute it
+                sqlStatement = "CREATE TABLE IF NOT EXISTS " + tableName
+                        + "(FNAME VARCHAR(20), LNAME VARCHAR(20))";
+                writer.println("Executing: " + sqlStatement);
+                stmt.executeUpdate(sqlStatement);
+            } catch (SQLException e) {
+                writer.println("Error creating table: " + e);
+            }
+        }
+
+    }
+
