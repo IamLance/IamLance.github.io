@@ -45,7 +45,7 @@ In this part we will be create a SQL Database Service and bind it our app
 7. Restage Application
 
 
-Examine the code
+Examine the code - Finding the Service
 -------------
  The Application is coded in JSP.
  
@@ -86,3 +86,8 @@ and If it was able to find the service we then get the credentials we need to co
                 user = (String) creds.get("username");
                 password = (String) creds.get("password");
                 url = (String) creds.get("jdbcurl");
+                
+            
+
+Examine the code - Connecting to the Database
+-------------
