@@ -51,8 +51,7 @@ Examine the code
  
 1.  Examine the Database connection code. Go to DBHelper.java
 
+Notice that with this line we get the system environment variables
+
 Map< String, String > env = System.getenv();
-  if (env.containsKey("VCAP_SERVICES")) {
-    JSONParser parser = new JSONParser();
-    JSONObject vcap = (JSONObject) parser.parse(env.get("VCAP_SERVICES"));
-            JSONObject service = null;
+ 
