@@ -67,7 +67,7 @@ If it does contain a VCAP services we then  put it in a JSON object since it is 
 We then parse it and look for the SQL Database service hiding under the key ""sqldb"".
 
        for (Object key : vcap.keySet()) {
-                    String keyStr = (String) key;                                               if(keyStr.toLowerCase().contains("sqldb")) {
+       String keyStr = (String) key;                                               if(keyStr.toLowerCase().contains("sqldb")) {
        service = (JSONObject) ((JSONArray) vcap.get(keyStr)).get(0);
                         break;
                     }
@@ -78,9 +78,10 @@ We then check if it was able to find the SQL Database service
 
 and If it was able to find the service we then get the credentials we need to connect to the database
 
-     JSONObject creds = (JSONObject) service.get("credentials");
-	                                                 databaseHost = (String)creds.get("host");                                                 databaseName = (String) creds.get("db");
-     port = (long) creds.get("port");
-    user = (String) creds.get("username");
-    password = (String) creds.get("password");
-    url = (String) creds.get("jdbcurl");
+    JSONObject creds = (JSONObject) service.get("credentials");
+                databaseHost = (String) creds.get("host");
+                databaseName = (String) creds.get("db");
+                port = (long) creds.get("port");
+                user = (String) creds.get("username");
+                password = (String) creds.get("password");
+                url = (String) creds.get("jdbcurl");
