@@ -3,7 +3,7 @@ layout: post
 title: 
 ---
 
-SQL Database and dash DB Tutorial
+SQL Database  
 ===================
 
 
@@ -182,3 +182,16 @@ Code for deleting data
                 }
             }
         }
+
+
+
+
+dashDB  VS SQL Database
+===================
+1. Login to your Bluemix account [Link](https://console.ng.bluemix.net/)
+2.  Go to catalog and find dashdb and click it then  click create leave the service unbound.
+3.  On the right side click the launch button.
+4.  It will open another tab we will call this the dashdb console. Go back to the previous tab and go to dashboard. 
+5.  In the dashboard find the previous SQL Database service we have created in the SQL Database Tutotrial and click it.
+6.  On the right side click launch. It will launch another tab and we will call this the SQL Database console.
+7.  Exploring both you will notice that dashdb has more features than SQL Database.
