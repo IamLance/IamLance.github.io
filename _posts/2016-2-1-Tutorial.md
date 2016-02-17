@@ -72,3 +72,15 @@ We then parse it and look for the SQL Database service hiding under the key ""sq
                         break;
                     }
                 }
+We then check if it was able to find the SQL Database service 
+
+     if (service != null) 
+
+and If it was able to find the service we then get the credentials we need to connect to the database
+
+     JSONObject creds = (JSONObject) service.get("credentials");
+	                                                 databaseHost = (String)creds.get("host");                                                 databaseName = (String) creds.get("db");
+     port = (long) creds.get("port");
+    user = (String) creds.get("username");
+    password = (String) creds.get("password");
+    url = (String) creds.get("jdbcurl");
