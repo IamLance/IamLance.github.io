@@ -90,7 +90,8 @@ and If it was able to find the service we then get the credentials we need to co
             
 
 Examine the code - Connecting to the Database
--------------
+------------- 
+To connect to the database we then input the credentials we parse earlier from the VCAP services and input in DB2SimpleDataSource to get a connection. 
 
     DB2SimpleDataSource dataSource = new DB2SimpleDataSource();
                     dataSource.setServerName(databaseHost);
@@ -99,3 +100,4 @@ Examine the code - Connecting to the Database
                     dataSource.setUser(user);
                     dataSource.setPassword(password);
                     dataSource.setDriverType(4);
+                    this.con = dataSource.getConnection();
