@@ -91,3 +91,11 @@ and If it was able to find the service we then get the credentials we need to co
 
 Examine the code - Connecting to the Database
 -------------
+
+    DB2SimpleDataSource dataSource = new DB2SimpleDataSource();
+                    dataSource.setServerName(databaseHost);
+                    dataSource.setPortNumber((int) port);
+                    dataSource.setDatabaseName(databaseName);
+                    dataSource.setUser(user);
+                    dataSource.setPassword(password);
+                    dataSource.setDriverType(4);
