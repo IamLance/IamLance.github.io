@@ -19,17 +19,19 @@ Installing the Application
 In this part we will be installing your the application by uploading it to bluemix.
 
  1.  Open a web browser tab and login to [GitHub](https://github.com).
- 2. Download [AppHere](https://github.com/IamLance/sql-databases/blob/master/build/libs/sqlApp.war)
- 3. In your Desktop create a new Folder and name it sqlTemp 
- 4.  Copy the downloaded App to sqlTemp
- 5.  Using the command prompt go to the sqlTemp directory
- 6.  In the command prompt login to you bluemix account
+ 2. Clone the respository https://github.com/IamLance/sql-databases
+> git clone https://github.com/IamLance/sql-databases
+
+
+ 3. Go to the directory where you cloned the repository 
+ 4.  In the command prompt login to you bluemix account
 
 > cf login -a https://api.ng.bluemix.net -s dev
 
 
  Then Push the App
-> cf push sqlTutorial-(your_name) -m 256M -p sqlApp.war
+
+    > cf push sqlTutorial-(your_name) -m 256M -p sql-databases/build/libs/sqlApp.war
 
 Add a SQL Database Service
 -------------
@@ -45,7 +47,7 @@ In this part we will be create a SQL Database Service and bind it our app
 7. Restage Application
 
 
-Examine the code - Finding the Service
+Code Analysis - Finding the Service
 -------------
  The Application is coded in JSP.
  
@@ -89,7 +91,7 @@ and If it was able to find the service we then get the credentials we need to co
                 
             
 
-Examine the code - Connecting to the Database
+Code Analysis - Connecting to the Database
 ------------- 
 To connect to the database we then input the credentials we parse earlier from the VCAP services and input in DB2SimpleDataSource to get a connection. 
 
@@ -103,7 +105,7 @@ To connect to the database we then input the credentials we parse earlier from t
                     this.con = dataSource.getConnection();
                 
 
-Examine the code - SQL Statements
+Code Analysis - SQL Statements
 ------------- 
 Code for creating a table 
 
@@ -195,3 +197,10 @@ dashDB  VS SQL Database
 5.  In the dashboard find the previous SQL Database service we have created in the SQL Database Tutotrial and click it.
 6.  On the right side click launch. It will launch another tab and we will call this the SQL Database console.
 7.  Exploring both you will notice that dashdb has more features than SQL Database.
+8.  In the dashdb console click analytic on the left side then click R script.
+9.  You will see the sample projects In-Application Analytics, In-Database Analytics and Data-Visualization all these not existing in SQL Databases.
+10.  Click the Customer-Churn(Decision Tree) under the In-Database analytics.
+11. You will see the sample script in the script tab. This is actually a R script that is mostly common use in data analysis and statistics.
+12.  Click submit.
+13.  In the Plot tab you will see the result of the R script code.
+14.  Explore other features of dashdb by repeating steps from 10 to 13 except this time picking a different option.
