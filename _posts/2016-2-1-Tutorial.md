@@ -204,3 +204,9 @@ dashDB  VS SQL Database
 12.  Click submit.
 13.  In the Plot tab you will see the result of the R script code.
 14.  Explore other features of dashdb by repeating steps from 10 to 13 except this time picking a different option.
+
+----------
+
+dashDB  
+===================
+Is a data warehousing and also a data analytics tool for analysing data and creating deep insights.
