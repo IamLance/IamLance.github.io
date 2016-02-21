@@ -18,13 +18,12 @@ Installing the Application
 -------------
 In this part we will be installing your the application by uploading it to bluemix.
 
- 1.  Open a web browser tab and login to [GitHub](https://github.com).
- 2. Clone the respository https://github.com/IamLance/sql-databases
+ 1. Clone the respository https://github.com/IamLance/sql-databases
 > git clone https://github.com/IamLance/sql-databases
 
 
- 3. Go to the directory where you cloned the repository 
- 4.  In the command prompt login to you bluemix account
+ 2. Go to the directory where you cloned the repository 
+ 3.  In the command prompt login to you bluemix account
 
 > cf login -a https://api.ng.bluemix.net -s dev
 
